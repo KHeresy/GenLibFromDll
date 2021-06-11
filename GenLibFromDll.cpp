@@ -70,12 +70,12 @@ int main(int argc, char** argv)
 						else if(vTokens.size() == 4)
 						{
 							// Basic format: 1    0 00001360 LiquidVR
-							vFunctionDef.push_back(vTokens[3]);
+							vFunctionDef.push_back(vTokens[3] + " @" + vTokens[0]);
 						}
 						else if (vTokens.size() > 5 )
 						{
 							// debug format: 1    0 0000F911 ??0Client@aiaa@nvidia@@QEAA@$$QEAV012@@Z = @ILT+59660(??0Client@aiaa@nvidia@@QEAA@$$QEAV012@@Z)
-							vFunctionDef.push_back(vTokens[3] + " " + vTokens[4] + " " + vTokens[5]);
+							vFunctionDef.push_back(vTokens[3] + " " + vTokens[4] + " " + vTokens[5] + " @" + vTokens[0]);
 						}
 					}
 					else
